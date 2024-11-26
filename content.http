@@ -1,0 +1,60 @@
+
+###
+GET http://localhost:8085/api/expense
+
+###
+POST http://localhost:8085/api/expense
+Content-Type: application/json
+
+{
+  "amount": 19.9,
+  "card": "CITI",
+  "category": "GROCERY",
+  "description": "Fruits from Prime",
+  "id": "eaf2dfef-ebcc-4515-b9f1-799033d5be81",
+  "month": 11,
+  "year": 2024
+}
+
+###
+POST http://localhost:8085/api/expense
+Content-Type: application/json
+
+{
+  "amount": 21.2,
+  "card": "HSBC",
+  "category": "HEALTH",
+  "description": "ActiveSG Gym Visit",
+  "month": 11,
+  "year": 2024
+}
+
+###
+PUT http://localhost:8085/api/expense/678a8f10-a223-4d92-bff3-d423399f75a4
+Content-Type: application/json
+
+{
+  "amount": 25.2,
+  "card": "HSBC",
+  "category": "HEALTH",
+  "description": "ActiveSG Gym Visit",
+  "month": 11,
+  "year": 2024
+}
+
+###
+DELETE http://localhost:8085/api/expense/76599c13-bb08-4032-a31a-6301d749264f
+
+### Invalid Inputs to test validations
+POST http://localhost:8085/api/expense
+Content-Type: application/json
+
+{
+  "amount": 19.9,
+  "card": "citi",
+  "category": "GROCERY",
+  "description": "Fruits from Prime",
+  "id": "eaf2dfef-ebcc-4515-b9f1-799033d5be81",
+  "month": 11,
+  "year": 2024
+}

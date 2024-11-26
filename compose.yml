@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ~/src/main/resources/db-files:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=dimuth
+      - POSTGRES_USER=dimuth
+      - POSTGRES_DB=dimuth
